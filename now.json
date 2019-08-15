@@ -47,6 +47,38 @@
       }
     },
     {
+      "src": "/stats/signed",
+      "dest": "/api/is-signed.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+      }
+    },
+    {
+      "src": "/stats/signed/(.*)",
+      "dest": "/api/is-signed.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+      }
+    },
+    {
+      "src": "/stats/cancelled",
+      "dest": "/api/is-cancelled.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+      }
+    },
+    {
+      "src": "/stats/cancelled/(.*)",
+      "dest": "/api/is-cancelled.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+      }
+    },
+    {
       "src": "/stats/(.*)",
       "dest": "/README.html"
     }
