@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "name": "ms-shared-api-avtaler-stats",
+  "scope": "minelev",
+  "alias": [
+    "stats.avtaler.minelev.no"
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "MONGODB_CONNECTION": "@db-cosmos-prod-connection-read",
+    "MONGODB_COLLECTION": "avtaler",
+    "MONGODB_NAME": "minelev"
+  },
+  "builds": [
+    {
+      "src": "/README.md",
+      "use": "@now/md"
+    },
+    { 
+      "src": "/api/*.js",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/README.html"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/static/favicon.ico"
+    },
+    {
+      "src": "/stats/total",
+      "dest": "/api/total.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+      }
+    },
+    {
+      "src": "/stats/total/(.*)",
+      "dest": "/api/total.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+      }
+    },
+    {
+      "src": "/stats/(.*)",
+      "dest": "/README.html"
+    }
+  ]
+}
