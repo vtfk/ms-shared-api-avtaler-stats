@@ -79,6 +79,54 @@
       }
     },
     {
+      "src": "/stats/manual",
+      "dest": "/api/is-manual.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+      }
+    },
+    {
+      "src": "/stats/manual/(.*)",
+      "dest": "/api/is-manual.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+      }
+    },
+    {
+      "src": "/stats/canbedigital",
+      "dest": "/api/can-be-digital.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+      }
+    },
+    {
+      "src": "/stats/canbedigital/(.*)",
+      "dest": "/api/can-be-digital.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+      }
+    },
+    {
+      "src": "/stats/parts",
+      "dest": "/api/parts.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+      }
+    },
+    {
+      "src": "/stats/parts/(.*)",
+      "dest": "/api/parts.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+      }
+    },
+    {
       "src": "/stats/(.*)",
       "dest": "/README.html"
     }

@@ -13,14 +13,14 @@ module.exports = async (request, response) => {
   const logs = db.collection(process.env.MONGODB_COLLECTION)
   const params = getParams(request.url)
   const { type } = params
-  const query = type ? { status: 'cancelled', type: type, partOf: '' } : { status: 'cancelled', partOf: '' }
-  logger('info', ['api', 'is-cancelled', 'type', type || 'any'])
+  const query = type ? { isManual: true, canBeDigital: false, isDummy: false, type: type, partOf: '' } : { isManual: true, canBeDigital: false, isDummy: false, partOf: '' }
+  logger('info', ['api', 'is-manual', 'type', type || 'any'])
   try {
     const count = await logs.countDocuments(query)
-    logger('info', ['api', 'is-cancelled', 'success', count])
+    logger('info', ['api', 'is-manual', 'success', count])
     response.json({ total: count })
   } catch (error) {
-    logger('error', ['api', 'is-cancelled', error])
+    logger('error', ['api', 'is-manual', error])
     response.status(500)
     response.send(error)
   }

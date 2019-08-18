@@ -28,6 +28,34 @@ Returns total number of cancelled agreements
 
 Returns total number of cancelled agreements filtered by type
 
+## ```/stats/manual```
+
+Returns total number of manual only agreements
+
+## ```/stats/manual/:type```
+
+Returns total number of manual only agreements filtered by type
+
+## ```/stats/canbedigital```
+
+Returns total number of agreements that could be digital
+
+## ```/stats/canbedigital/:type```
+
+Returns total number of agreements that could be digital filtered by type
+
+## ```/stats/parts```
+
+Returns total number of parts
+
+## ```/stats/parts/:type```
+
+Returns total number of parts filtered by type
+
+## ```/stats/parts/:type/:status```
+
+Returns total number of parts filtered by type and status
+
 # Development
 
 You'll need the [now-cli](https://zeit.co/now) installed

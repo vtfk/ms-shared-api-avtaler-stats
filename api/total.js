@@ -13,7 +13,7 @@ module.exports = async (request, response) => {
   const logs = db.collection(process.env.MONGODB_COLLECTION)
   const params = getParams(request.url)
   const { type } = params
-  const query = type ? { type: type } : {}
+  const query = type ? { type: type, partOf: '' } : { partOf: '' }
   logger('info', ['api', 'total', 'type', type || 'any'])
   try {
     const count = await logs.countDocuments(query)
