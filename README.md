@@ -20,6 +20,14 @@ Returns total number of signed agreements
 
 Returns total number of signed agreements filtered by type
 
+## ```/stats/signedbyadmin```
+
+Returns total number of agreements signed by admin
+
+## ```/stats/signedbyadmin/:type```
+
+Returns total number of agreements signed by admin filtered by type
+
 ## ```/stats/cancelled```
 
 Returns total number of cancelled agreements
