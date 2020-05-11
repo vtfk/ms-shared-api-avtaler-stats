@@ -39,7 +39,7 @@
     "ava": "3.5.0",
     "coveralls": "3.0.9",
     "nyc": "15.0.0",
-    "standard": "14.3.3"
+    "standard": "14.3.4"
   },
   "dependencies": {
     "mongodb": "3.5.2"
